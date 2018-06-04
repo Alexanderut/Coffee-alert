@@ -98,10 +98,11 @@ else
  {
     digitalWrite(LED, HIGH);         /////////// Turning on internal LED for 10 sek when sending email core runs. 
     
-    Serial.println("Sending Email, shutting down for 66min");
-    
+    Serial.println("Sending Email, shutting down for 60min");
+
+                                                      //////////////////////////////// The below code is spit our from www.easycoding.tn
     client.connect("maker.ifttt.com",80);
-    MakerIFTTT_Key ="ekTDtehoEXGQYkukzDejCB8Mtlo5fGmZpqueO-Gyzws";
+    MakerIFTTT_Key ="ekTDtehoEXGQYkukzDejCB8Mtlo5fGmZpqueO-Gyzws";    //////////////// trigger key from IFTTT
     MakerIFTTT_Event ="mail";
     p = post_rqst;
     p = append_str(p, "POST /trigger/");
